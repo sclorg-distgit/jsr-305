@@ -4,7 +4,7 @@
 
 Name:           %{?scl_prefix}%{pkg_name}
 Version:        0
-Release:        0.18.20090319svn.9%{?dist}
+Release:        0.18.20090319svn.10%{?dist}
 Summary:        Correctness annotations for Java code
 
 # The majority of code is BSD-licensed, but some Java sources
@@ -38,7 +38,7 @@ This package contains the API documentation for %{pkg_name}.
 
 %prep
 %setup -q -n %{pkg_name}
-%{?scl:scl enable maven30 %{scl} - <<"EOF"}
+%{?scl:scl enable %{scl} - <<"EOF"}
 set -e -x
 cp %{SOURCE1} NOTICE-CC-BY
 
@@ -51,13 +51,13 @@ cp %{SOURCE1} NOTICE-CC-BY
 %{?scl:EOF}
 
 %build
-%{?scl:scl enable maven30 %{scl} - <<"EOF"}
+%{?scl:scl enable %{scl} - <<"EOF"}
 set -e -x
 %mvn_build
 %{?scl:EOF}
 
 %install
-%{?scl:scl enable maven30 %{scl} - <<"EOF"}
+%{?scl:scl enable %{scl} - <<"EOF"}
 set -e -x
 %mvn_install
 %{?scl:EOF}
@@ -70,6 +70,9 @@ set -e -x
 %doc ri/LICENSE NOTICE-CC-BY
 
 %changelog
+* Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 0-0.18.20090319svn.10
+- maven33 rebuild #2
+
 * Sat Jan 09 2016 Michal Srb <msrb@redhat.com> - 0-0.18.20090319svn.9
 - maven33 rebuild
 
