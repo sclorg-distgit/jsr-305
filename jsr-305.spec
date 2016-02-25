@@ -4,7 +4,7 @@
 
 Name:           %{?scl_prefix}%{pkg_name}
 Version:        0
-Release:        0.18.20090319svn.10%{?dist}
+Release:        0.18.20090319svn.11%{?dist}
 Summary:        Correctness annotations for Java code
 
 # The majority of code is BSD-licensed, but some Java sources
@@ -23,7 +23,7 @@ Source0:        jsr-305-0.4.20090319.tar.xz
 # File containing URL to CC-BY license text
 Source1:        NOTICE-CC-BY.txt
 
-BuildRequires:  %{?scl_prefix_java_common}maven-local
+BuildRequires:  %{?scl_prefix}maven-local
 
 %package javadoc
 Summary:        Javadoc documentation for %{pkg_name}
@@ -70,6 +70,9 @@ set -e -x
 %doc ri/LICENSE NOTICE-CC-BY
 
 %changelog
+* Mon Feb 08 2016 Michal Srb <msrb@redhat.com> - 0-0.18.20090319svn.11
+- Fix BR on maven-local & co.
+
 * Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 0-0.18.20090319svn.10
 - maven33 rebuild #2
 
