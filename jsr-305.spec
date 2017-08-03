@@ -3,7 +3,7 @@
 
 Name:           %{?scl_prefix}jsr-305
 Version:        0
-Release:        0.20.20130910svn.1%{?dist}
+Release:        0.20.20130910svn.2%{?dist}
 Summary:        Correctness annotations for Java code
 
 # The majority of code is BSD-licensed, but some Java sources
@@ -58,6 +58,9 @@ cp %{SOURCE1} NOTICE-CC-BY
 %doc ri/LICENSE NOTICE-CC-BY
 
 %changelog
+* Thu Jun 22 2017 Michael Simacek <msimacek@redhat.com> - 0-0.20.20130910svn.2
+- Mass rebuild 2017-06-22
+
 * Wed Jun 21 2017 Java Maintainers <java-maint@redhat.com> - 0-0.20.20130910svn.1
 - Automated package import and SCL-ization
 
